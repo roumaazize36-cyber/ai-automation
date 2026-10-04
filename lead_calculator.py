@@ -1,0 +1,11 @@
+leads = int(input("How many leads do you get? "))
+average_value = float(input("What is the average value of one lead (€)? "))
+lost_percentage = float(input("What percentage of leads are lost? "))      
+lost_leads = leads * (lost_percentage / 100)
+lost_revenue = lost_leads * average_value 
+print()
+print(f"Estimated lost leads: {lost_leads:.1f}")
+print(f"Estimated lost revenue: €{lost_revenue:,.2f}")
+recovery_percentage = float(input("What percentage of lost leads could automation recover? ")) 
+recovered_revenue = lost_revenue * (recovery_percentage / 100)
+print(f"Potentially recovered revenue: €{recovered_revenue:,.2f}")
